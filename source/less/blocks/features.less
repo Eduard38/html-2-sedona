@@ -1,20 +1,20 @@
 .features {
   text-align: center;
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
   margin-bottom: 30px;
-  
+
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;
   }
 }
 
 .features__wrapper {
-  width: 320px;
-  padding: 0 20px;
-
+  width: 100%;
+  //padding: 0 20px;
+  
   @media (min-width: @tablet-width) {
-   width: 768px; 
+   width: 768px;
    margin: 0 auto;
   }
 
@@ -54,10 +54,10 @@
 .features__image {
   vertical-align: bottom;
   order: 2;
-  
+
   &--rightside {
-    @media (min-width: @tablet-width) {
-    order: 1;
+      @media (min-width: @tablet-width) {
+      order: 1;
+      }
     }
-  }
 }
