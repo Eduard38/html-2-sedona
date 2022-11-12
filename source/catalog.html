@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/icons/152.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/icons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Academy: {{SEDONA}}</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"></button>
+          <span class="visually-hidden">Открыть меню</span>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+              <li class="main-nav__item main-nav__item--current"><a class="main-nav__link">Фото и видео</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма Отзыва</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="#">HTML ACADEMY</a></li>
+            </ul>
+          </div>
+      </nav>
+      <img class="page-header__wall" src="img/main-wall.jpg" width="320" height="389" alt="Пейзаж Седоны">
+    </header>
+    <main class="page-main">
+      <h1></h1>
+      <section class="photogallery header-page">
+        <div class="photogallery__wrapper">
+          <h2 class="header-page__title">Фото и видео</h2>
+          <p class="header-page__text">Не моежете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          <ul class="photogallery__list">
+            <li class="photogallery__item photogallery__item--long">
+              <img src="img/gallery-item-1.jpg" width="280" height="280" alt="Природа Седоны">
+              <h3 class="photogallery__item__title"><a class="photogallery__link" href="#">Народные просторы</a></h3>
+              <p class="photogallery__author">Автор фото: Борис</p>
+              <p class="like-counter">1350</p>
+            </li>
+            <li class="photogallery__item">
+              <img src="img/gallery-item-2.jpg" width="280" height="280" alt="Растения в Седоне">
+              <h3 class="photogallery__item__title"><a class="photogallery__link" href="#">Местная растительность</a></h3>
+              <p class="photogallery__author">Автор фото: Сергей</p>
+              <p class="like-counter">143</p>
+            </li>
+            <li class="photogallery__item">
+              <img class="photogallery__image" src="img/gallery-item-3.jpg" width="280" height="280" alt="Северная дорога Седоны">
+              <h3 class="photogallery__item__title"><a class="photogallery__link" href="#">Дорога на север</a></h3>
+              <p class="photogallery__author">Автор фото: Петр</p>
+              <p class="like-counter">96</p>
+            </li>
+            <li class="photogallery__item">
+              <img src="img/gallery-item-4.jpg" width="280" height="280" alt="фотография Моста дьявола">
+              <h3 class="photogallery__item__title"><a class="photogallery__link" href="#">Мост дьявола</a></h3>
+              <p class="photogallery__author">Автор фото: Антон</p>
+              <p class="like-counter">254</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="videoshort">
+        <div class="videoshort__wrapper">
+          <h2 class="header-page__title">Все еще сомневаетесь?</h2>
+          <p class="header-page__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <video class="videoshort__player" src="" controls width="320" height="200" poster="img/video-poster.jpg">
+            <p>Ваш браузер не поддерживает HTML5 видео. Используйте <a href="">ссылку на видео</a> для доступа.</p>
+          </video>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__item">#VisitSedona</p>
+        <ul class="page-footer__social social">
+          <li class="social__item"><a class="social__link social__link--twitter" href="#" aria-label="Мы в Твиттере"></a></li>
+          <li class="social__item"><a class="social__link social__link--fb" href="#" aria-label="Мы в Фейсбуке"></a></li>
+          <li class="social__item"><a class="social__link social__link--youtube" href="#" aria-label="Мы в Ютубе"></a></li>
+        </ul>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+    </div>
+    </footer>
+  </body>
+</html>

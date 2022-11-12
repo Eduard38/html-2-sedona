@@ -1,0 +1,35 @@
+.emotions {
+  border: none;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  order: 5;
+  @media (min-width: @tablet-width) {
+    order: 5;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.emotion__label {
+  display: inline-block;
+  // margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.emotions__textarea {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  padding: 13px 23px 29px 21px;
+  color: @black;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  &::placeholder {
+    color: @black;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}

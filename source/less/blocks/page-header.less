@@ -1,0 +1,30 @@
+.page-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.page-header__logo, img {
+  order: 2;
+  
+  @media (min-width: @tablet-width) {
+  }
+}
+
+.page-header__wall {
+  margin: 0 auto;
+  order: 3;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 518px;
+    background-color: #ffffff;
+    background-image: url("../../img/back-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -9px;
+  }
+}

@@ -1,0 +1,49 @@
+.form__legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 auto;
+  text-align: center;
+  // margin-bottom: 20px;
+}
+
+.form__list {
+  list-style: none;
+  @media (min-width: @tablet-width) {
+    &--places {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+    }
+  }
+}
+
+.form__item {}
+
+.form__label {
+  &--radio,
+  &--checkbox {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+  }
+}
+
+.form__input {
+  padding: 18px 21px 14px;
+  margin-bottom: 20px;
+  height: 58px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  border: none;
+  background-color: @form-grey;
+  color: @black;
+  &::placeholder {
+    color: @black;
+  }
+  &--radio {}
+  &--checkbox {}
+}

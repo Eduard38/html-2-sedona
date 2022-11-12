@@ -1,0 +1,27 @@
+.fio {
+  border: none;
+  order: 1;
+  @media (min-width: @tablet-width) {
+    order: 2;
+    width: 320px;
+  }
+}
+
+.fio__label {
+  color: @text-grey;
+}
+
+.fio__input {
+  padding: 18px 21px 14px;
+  margin-bottom: 20px;
+  height: 58px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  border: none;
+  background-color: @form-grey;
+  color: @black;
+  &::placeholder {
+    color: @black;
+  }
+}

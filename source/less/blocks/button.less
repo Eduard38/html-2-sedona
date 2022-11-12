@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  text-align: center;
+  min-width: 280px;
+  padding: 14px 32px 17px 32px;
+  margin: 0 20px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  background: @main-blue;
+  color: @white;
+  border: none;
+  text-transform: uppercase;
+  &--booking-link {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 58px;
+      width: 458px;
+      height: 58px;
+    }
+    @media (min-width: @desktop-width) {
+      margin-bottom: 66px;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    
+  }
+}
