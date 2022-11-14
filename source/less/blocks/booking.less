@@ -1,9 +1,7 @@
 .booking {
   text-align: center;
-  width: 320px;
+  min-width: 320px;
 }
-
-// .booking__wrapper {}
 
 .booking__title {
   margin-top: 0px;
@@ -23,13 +21,22 @@
 .booking__intro {
   margin: 0 auto;
   margin-bottom: 30px;
-  padding: 0;
+  padding: 0 20px;
   text-align: center;
   line-height: 24px;
   color: @text-grey;
+  max-width: 435px;
+
+  & br {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
-   width: 435px;
+   padding: 0;
+
+   & br {
+    display: block;
+   }
   }
 }
 
