@@ -1,27 +1,46 @@
 .fio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0 20px;
   border: none;
   order: 1;
-  @media (min-width: @tablet-width) {
-    order: 2;
+
+  &::before {
+    position: absolute;
+    content: "";
     width: 320px;
+    height: 1px;
+    background-color: @hover-form-grey;
+    top: -60px;
+    left: 0;
   }
-}
 
-.fio__label {
-  color: @text-grey;
-}
+  @media (min-width: @tablet-width) {
+    width: 265px;
+    margin-right: 60px;
+    padding: 0;
+    order: 2;
 
-.fio__input {
-  padding: 18px 21px 14px;
-  margin-bottom: 20px;
-  height: 58px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  border: none;
-  background-color: @form-grey;
-  color: @black;
-  &::placeholder {
-    color: @black;
+    &::before {
+      width: 1px;
+      height: 264px;
+      background-color: @hover-form-grey;
+      top: -50px;
+      left: -53px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    margin-right: 110px;
+
+    &::before {
+      left: -90px;
+    }
   }
 }

@@ -1,14 +1,8 @@
-.full-form {}
+.full-form {
+  width: 100%;
 
-.full-form__wrapper {
   @media (min-width: @tablet-width) {
-    width: 768px;
-    // padding: 0 60px;
-    margin: 0 auto;
-  }
-  @media (min-width: @desktop-width) {
-    width: 960px;
-    padding: 0;
+    width: 100%;  
   }
 }
 
@@ -17,19 +11,30 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 200px;
   }
 }
 
 .full-form__footnote {
   display: none;
+
   @media (min-width: @tablet-width) {
     display: inline-block;
-    margin-right: 0;
-    margin-left: 150px;
+    // margin-right: 100px;
+    padding-right: 60px;
+    float: right;
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 110px;
   }
 }

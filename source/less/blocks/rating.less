@@ -1,11 +1,35 @@
 .rating {
+  position: relative;
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   order: 3;
+
   @media (min-width: @tablet-width) {
+    width: 300px;
+    margin-left: 60px;
+    padding: 0;
     order: 1;
-    width: 320px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 380px;
+    margin-left: 110px;
+  }
+}
+
+.rating::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 320px;
+  height: 1px;
+  background-color: @hover-form-grey;
+  top: -60px;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

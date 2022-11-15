@@ -12,17 +12,29 @@
   color: @white;
   border: none;
   text-transform: uppercase;
+
   &--booking-link {
     @media (min-width: @tablet-width) {
       margin-bottom: 58px;
       width: 458px;
       height: 58px;
     }
+
     @media (min-width: @desktop-width) {
       margin-bottom: 66px;
     }
   }
+
   @media (min-width: @tablet-width) {
-    
+    &--form {
+      width: 324px;
+      margin-left: 60px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--form {
+      margin-left: 110px;
+    }
   }
 }

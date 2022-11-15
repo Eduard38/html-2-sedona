@@ -1,33 +1,107 @@
 .form__legend {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  margin: 0 auto;
   text-align: center;
-  // margin-bottom: 20px;
-}
+  background-color: @white;
 
-.form__list {
-  list-style: none;
-  @media (min-width: @tablet-width) {
-    &--places {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 0;
+  @media (min-width: @desktop-width) {
+    &--fio {
+      margin-left: 0px;
+    }
+
+    &--visited-places {
+      margin-bottom: 58px;
     }
   }
 }
 
-.form__item {}
+.form__list {
+  margin: 0;
+  padding-left: 70px;
+  list-style: none;
+
+  &--places {
+    margin-top: 15px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--places {
+      display: flex;
+      width: 350px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 50px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      margin-left: 190px;
+    }
+
+    &--rating {
+      padding-top: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--places {
+      width: 910px;
+      margin-left: 70px;
+      margin-right: 0;
+    }
+    
+  }
+}
+
+// .form__item {}
 
 .form__label {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+
   &--radio,
   &--checkbox {
+    margin-bottom: 43px;
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
     text-transform: none;
+  }
+
+  &--tel::after,
+  &--email::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 56px;
+    height: 56px;
+    top: 27px;
+    right: 1px;
+    background-color: @form-grey-2;
+    background-image: url("../../img/icons/phone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--email::after {
+    background-image: url("../../img/icons/mail.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    &--checkbox {
+      width: 125px;
+      margin-bottom: 62px;
+    }
+
+    &--radio {
+      margin-bottom: 51px;
+    }
   }
 }
 
@@ -41,9 +115,64 @@
   border: none;
   background-color: @form-grey;
   color: @black;
+
   &::placeholder {
     color: @black;
   }
-  &--radio {}
-  &--checkbox {}
+  
+  &--text {
+    width: 100%;
+    margin-left: 14px;
+  }
+
+  &--tel,
+  &--email {
+    width: 100%;
+  }
+}
+
+.form__input--radio + .form__label::before {
+  position: absolute;
+  content: "";
+  width: 48px;
+  height: 48px;
+  top: -10px;
+  left: -70px;
+  background-color: @form-grey;
+  border-radius: 50%;
+}
+
+.form__input--radio:checked + .form__label::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 5px;
+  left: -55px;
+  border-radius: 50%;
+  background-color: @text-grey;
+}
+
+.form__input--checkbox + .form__label::before {
+  position: absolute;
+  content: "";
+  width: 46px;
+  height: 46px;
+  top: -10px;
+  left: -70px;
+  background-color: @form-grey;
+  border: 5px solid #F2F2F2;
+  border-radius: 5px;
+}
+
+.form__input--checkbox:checked + .form__label::after {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 16px;
+  top: 4px;
+  left: -56px;
+  background-image: url("../../img/icons/checkbox-tick.svg");
+  background-position: center;
+  background-color: @form-grey;
 }

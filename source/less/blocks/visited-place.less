@@ -1,11 +1,69 @@
 .visited-place {
+  position: relative;
   border: none;
+  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 20px 20px;
   order: 4;
   
-  @media (min-width: @tablet-width) {
-    order: 4;
-    width: 100%;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: @hover-form-grey;
+    top: -85px;
+    left: 0;
   }
+
+  @media (min-width: mobile-width-only) {
+   
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+    order: 4;
+
+    &::before {
+      width: 123px;
+      height: 1px;
+      background-color: @hover-form-grey;
+      top: -50px;
+      left: 60px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 123px;
+      height: 1px;
+      background-color: @hover-form-grey;
+      top: -50px;
+      right: 60px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    margin-bottom: 10px;
+
+    &::before {
+      width: 280px;
+      height: 1px;
+      background-color: @hover-form-grey;
+      top: -85px;
+      left: 110px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 280px;
+      height: 1px;
+      background-color: @hover-form-grey;
+      top: -85px;
+      right: 110px;
+    }
+  }
+
 }
