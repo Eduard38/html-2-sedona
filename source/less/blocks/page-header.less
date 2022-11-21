@@ -20,21 +20,70 @@
   padding-top: 90px;
   order: 2;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 282px;
+    height: 214px;
+    left: 20px;
+    background: url("../../img/icons/text-index.svg") no-repeat center;
+    background-size: 282px 214px;
+  }
+
   @media (min-width: @tablet-width) {
     height: 518px;
     background-image: url("../../img/icons/intro-triangle-desktop.svg"), url("../../img/back-desktop.jpg");
-    background-position-y: 245px, 0;
-    background-position-x: 0, 50%;
-    background-size: 768px 518px, 1200px 518px;
+    background-position-y: 232px, 0px;
+    background-position-x: 50%, 50%;
+    background-size: 1200px 518px, 1200px 518px;
+
+    &::before {
+      width: 461px;
+      height: 350px;
+      background-size: 460px, 350px;
+      left: 154px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    background-size: 1200px, 1200px;
-    background-position-y: 465px, 0;
+    background-size: 1200px, 1200px 518px;
+    background-position-y: 461px, 0px;
     
+    &::before {
+      left: 370px;
+    }
   }
 }
 
+.page-header__main-image--short{
+  height: 158px;
+  background-size: 320px, 320px;
+  background-position-y: 102px, -220px;
+
+  &::before {
+    height: 100px;
+    top: 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 290px;
+    background-position-y: 3px, -220px;
+    background-size: 1200px 518px, 1200px 518px;
+    
+    &::before {
+      width: 450px;
+      top: 67px;
+      left: 150px;
+      background-size: 450px 400px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: 370px;
+    }
+  }
+}
 .page-header__welcome-title {
   @media (min-width: @tablet-width) {
     width: 460px;
