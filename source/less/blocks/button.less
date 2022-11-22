@@ -13,7 +13,23 @@
   border: none;
   text-transform: uppercase;
 
-  &--booking-link {
+  &:hover {
+    background-color: @hover-blue;
+  }
+
+  &:active {
+    background-color: @down-blue;
+
+    & span {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    background-color: @button-disabled;
+  }
+
+  &--booking-link { 
     @media (min-width: @tablet-width) {
       margin-bottom: 58px;
       width: 458px;

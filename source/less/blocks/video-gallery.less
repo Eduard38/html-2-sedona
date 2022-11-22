@@ -1,0 +1,23 @@
+.video-gallery {
+  width: 100%;
+  margin-bottom: 82px;
+}
+
+.video-gallery__player {
+  vertical-align: bottom;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 648px;
+    height: 500px;
+    margin: 0 auto;
+    vertical-align: top;
+  }
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
+}
+
+.video-gallery__controls {
+  position: relative;
+}

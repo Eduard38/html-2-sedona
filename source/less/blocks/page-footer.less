@@ -50,13 +50,19 @@
   height: 26px;
   margin-bottom: 26px;
 
-  &::after {
+  & svg {
     position: absolute;
-    content: "";
-    background: url(../../img/icons/icon-htmlacademy.svg) no-repeat center center;
-    width: 27px;
-    height: 34px;
-    margin-left: 10px;
+    right: -10px;
+    top: -2px;
+  }
+
+  &:hover path {
+    fill: @main-blue;
+  }
+
+  &:active path {
+    fill: @black;
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

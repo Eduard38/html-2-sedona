@@ -1,4 +1,5 @@
 .advantages {
+  position: relative;
   padding: 0;
   background-color: @white;
   color: @black;
@@ -45,6 +46,7 @@
 }
 
 .advantages__item {
+  position: relative;
   padding: 0;
   margin: 0;
 
@@ -73,6 +75,17 @@
     height: 100%;
   }
 }
+
+.advantages--second .advantages__item:nth-child(n+2)::before {
+  position: absolute;
+  content: "";
+  width: 320px;
+  height: 1px;
+  background-color: @radio-down;
+  top: 0px;
+  left: -20px;
+}
+
 
 .advantages__title {
   padding: 25px 20px 0;
