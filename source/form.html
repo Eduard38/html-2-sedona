@@ -14,7 +14,7 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="page-header">
-        <nav class="main-nav main-nav--closed">
+        <nav class="main-nav main-nav--closed main-nav-nojs">
           <a class="main-nav__logo">
             <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
           </a>
@@ -61,15 +61,30 @@
                 <ul class="form__list form__list--rating">
                   <li class="form__list__item">
                     <input class="form__input form__input--radio visually-hidden" type="radio" name="rating" value="good" id="rating-good" checked>
-                    <label class="form__label form__label--radio" for="rating-good">Скорее положительное</label>
+                    <label class="form__label form__label--radio" for="rating-good">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M53.2464 27.9845C53.2464 14.0404 41.9411 2.73288 27.995 2.73288C14.0489 2.73288 2.7432 14.0404 2.7432 27.9845C2.7432 41.932 14.0491 53.2362 27.995 53.2362C41.9409 53.2362 53.2464 41.9319 53.2464 27.9845Z" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="5"/>
+                      </svg>
+                      Скорее положительное
+                    </label>
                   </li>
                   <li class="form__item">
                     <input class="form__input form__input--radio visually-hidden" type="radio" name="rating" value="bad" id="rating-bad">
-                    <label class="form__label form__label--radio" for="rating-bad">Скорее отрицательное</label>
+                    <label class="form__label form__label--radio" for="rating-bad">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M53.2464 27.9845C53.2464 14.0404 41.9411 2.73288 27.995 2.73288C14.0489 2.73288 2.7432 14.0404 2.7432 27.9845C2.7432 41.932 14.0491 53.2362 27.995 53.2362C41.9409 53.2362 53.2464 41.9319 53.2464 27.9845Z" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="5"/>
+                      </svg>
+                      Скорее отрицательное
+                    </label>
                   </li>
                   <li class="form__item">
                     <input class="form__input form__input--radio visually-hidden" type="radio" name="rating" value="confusion" id="rating-confusion">
-                    <label class="form__label form__label--radio" for="rating-confusion">Затрудняюсь ответить</label>
+                    <label class="form__label form__label--radio" for="rating-confusion">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M53.2464 27.9845C53.2464 14.0404 41.9411 2.73288 27.995 2.73288C14.0489 2.73288 2.7432 14.0404 2.7432 27.9845C2.7432 41.932 14.0491 53.2362 27.995 53.2362C41.9409 53.2362 53.2464 41.9319 53.2464 27.9845Z" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="5"/>
+                      </svg>
+                      Затрудняюсь ответить
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -78,19 +93,39 @@
                 <ul class="form__list form__list--places">
                   <li class="form__item">
                     <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="places" value="bridge-of-devil" id="places-bridge" checked>
-                    <label class="form__label form__label--checkbox" for="places-bridge">Мост Дьявола</label>
+                    <label class="form__label form__label--checkbox" for="places-bridge">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.5" y="2.5" width="51" height="51" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="5" stroke-linejoin="round"/>
+                      </svg>
+                      Мост Дьявола
+                    </label>
                   </li>
                   <li class="form__item">
                     <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="places" value="mountain-bell" id="places-mountain" checked>
-                    <label class="form__label form__label--checkbox" for="places-mountain">Гора-Колокол</label>
+                    <label class="form__label form__label--checkbox" for="places-mountain">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.5" y="2.5" width="51" height="51" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="5" stroke-linejoin="round"/>
+                      </svg>
+                      Гора-Колокол
+                    </label>
                   </li>
                   <li class="form__item">
                     <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="places" value="slide-park" id="places-park" checked>
-                    <label class="form__label form__label--checkbox" for="places-park">Слайд-парк</label>
+                    <label class="form__label form__label--checkbox" for="places-park">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.5" y="2.5" width="51" height="51" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="5" stroke-linejoin="round"/>
+                      </svg>
+                      Слайд-парк
+                    </label>
                   </li>
                   <li class="form__item">
                     <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="places" value="red-rocks" id="places-rocks">
-                    <label class="form__label form__label--checkbox" for="places-rocks">Красные скалы</label>
+                    <label class="form__label form__label--checkbox" for="places-rocks">
+                      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2.5" y="2.5" width="51" height="51" fill="#F2F2F2" stroke="#F2F2F2" stroke-width="5" stroke-linejoin="round"/>
+                      </svg>
+                      Красные скалы
+                    </label>
                   </li>
                 </ul>
               </fieldset>
