@@ -85,6 +85,7 @@
   border: none;
   cursor: pointer;
 
+
   @media (min-width: @tablet-width) {
     & path {
       fill: @white;
@@ -94,5 +95,17 @@
   @media (min-width: @desktop-width) {
     margin-right: 10px;
   }
+}
+
+.controls__button:hover path {
+  fill: @form-brown;
+
+  @media (min-width: @tablet-width) {
+    opacity: 0.6;
+  }
+}
+
+.controls__button:active path {
+  opacity: 0.3;
 }
 
