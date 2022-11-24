@@ -16,18 +16,17 @@
   }
 }
 .page-footer__item {
-  // display: inline-block;
   width: 170px;
   text-align: center;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   margin: 0 auto;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     position: relative;
-    top: 10px;
+    top: 16px;
     margin-left: 60px;
   }
 
@@ -43,17 +42,16 @@
 .page-footer__copyright {
   position: relative;
   display: block;
-  text-align: center;
   margin: 0 auto;
-  padding-right: 24px;
-  width: 121px;
+  padding-right: 0px;
+  width: 124px;
   height: 26px;
   margin-bottom: 26px;
 
   & svg {
     position: absolute;
-    right: -10px;
-    top: -2px;
+    right: -2px;
+    top: -3px;
   }
 
   &:hover path {
@@ -67,8 +65,12 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    top: 10px;
-    margin-right: 82px;
+    top: 14px;
+    margin-right: 96px;
+
+    & svg {
+      right: -36px;
+    }
   }
 
   @media (min-width: @desktop-width) {

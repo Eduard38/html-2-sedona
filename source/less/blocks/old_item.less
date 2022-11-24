@@ -1,0 +1,99 @@
+.item {
+  position: relative;
+
+  &:first-child .item__intro::before {
+    display: block;
+    content: "— №1 —";
+    margin-bottom: 18px;
+  }
+
+  &:last-child .item__intro::before {
+    display: block;
+    content: "— №2 —";
+    margin-bottom: 15px;
+  }
+
+  &:last-child .item__wrapper {
+    padding-top: 39px;
+    padding-bottom: 35px;
+  }
+
+  &:last-child .item__title {
+    padding-bottom: 15px;
+  }
+
+  @media (max-width: 767px) {
+    &:first-child {
+      padding-top: 27px;
+      background-image: url("../../img/icons/list-white-triangle.svg");
+      background-size: 320px 15px;
+      background-position-y: 0px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &:first-child .item__intro::before {
+      margin-bottom: 26px;
+    }
+
+    &:last-child .item__wrapper {
+      order: 2;
+    }
+  }
+}
+
+.item__wrapper {
+  padding: 20px 13px 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+    height: 256px;
+    padding: 40px 32px 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    padding: 47px 55px;
+  }
+}
+
+.item__title {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  padding-bottom: 12px;
+
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+
+    & br {
+      display: block;
+    }
+  }
+}
+
+.item__intro {
+  margin: 0;
+  line-height: 21px;
+
+  & br {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    & br {
+      display: block;
+    }
+  }
+}

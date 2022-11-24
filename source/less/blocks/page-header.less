@@ -4,10 +4,15 @@
   flex-direction: column;
   min-width: 320px;
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 55px;
   }
 }
 
@@ -41,7 +46,8 @@
       width: 461px;
       height: 350px;
       background-size: 460px, 350px;
-      left: 154px;
+      left: 152px;
+      top: 80px;
     }
   }
 
@@ -51,6 +57,7 @@
     
     &::before {
       left: 370px;
+      top: 80px;
     }
   }
 }

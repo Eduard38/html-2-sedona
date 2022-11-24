@@ -80,7 +80,7 @@
     content: "";
     position: absolute;
     top: 24px;
-    left: 18px;
+    right: 0;
     width: 27px;
     height: 4px;
     background-color: @white;
@@ -124,9 +124,8 @@
 
 .main-nav__list {
   display: flex;
-  flex-direction: column;
-  flex-wrap:nowrap;
-  align-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -140,7 +139,7 @@
 
 .main-nav__item {
   min-width: 320px;
-  min-height: 55px;
+  min-height: 53px;
   
   @media (max-width: @mobile-width-only) {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -154,10 +153,19 @@
       background-color: @down-blue;
       opacity: 0.3;
     }
-
   }
+
   @media (min-width: @tablet-width) {
-   min-width: 153px;
+   min-width: 150px;
+   margin: 0 auto;
+
+   &:nth-child(4n-2) {
+    margin-right: 20%;
+   }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 220px;
    margin: 0 auto;
 
    &:nth-child(4n-2) {
@@ -172,7 +180,7 @@
   height: 100%;
   padding: 0 20px;
   color: @white;
-  line-height: 50px;
+  line-height: 54px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
