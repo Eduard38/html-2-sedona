@@ -107,3 +107,31 @@
   //   top: -6px;
   // }
 }
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    margin-bottom: 38px;
+  }
+
+  .advantages__item--home,
+  .advantages__item--food {
+    .advantages__item__intro {
+      padding: 0 50px;
+    }
+  }
+
+  .advantages__item--gift {
+    .advantages__item__intro {
+      & br {
+        display: block;
+      }
+    }
+  }
+  
+  
+  .advantages__item--home svg,
+  .advantages__item--gift svg,
+  .advantages__item--food svg {
+    left: 160px;
+  }
+}

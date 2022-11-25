@@ -119,3 +119,33 @@
     padding: 0 40px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .features {
+    margin-bottom: 94px;
+  }
+
+  .item__wrapper {
+    width: 400px;
+  }
+
+  .item__title  {
+    padding-top: 46px;
+  }
+
+  .features__item:nth-child(2) .item__title {
+    padding-top: 52px;
+  }
+
+  .features__item:nth-child(2) .item__description {
+    padding: 0 80px;
+  }
+
+  .features__item:nth-child(n+3) .item__description::before {
+    margin-bottom: 24px;
+  }
+
+  .item__description {
+    padding: 0 50px;
+  }
+}

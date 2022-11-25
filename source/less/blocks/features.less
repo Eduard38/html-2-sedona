@@ -95,3 +95,15 @@
     order: 0;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .features__intro {
+    margin-bottom: 44px;
+  }
+
+  .features__item:first-child::after,
+  .features__item:nth-child(2)::after {
+    width: 800px;
+    background-size: 800px;
+  }
+}
