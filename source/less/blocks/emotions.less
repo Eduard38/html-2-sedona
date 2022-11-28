@@ -26,7 +26,7 @@
       width: 123px;
       height: 1px;
       background-color: @hover-form-grey;
-      top: 14px;
+      top: 8px;
       left: 60px;
     }
 
@@ -36,7 +36,7 @@
       width: 123px;
       height: 1px;
       background-color: @hover-form-grey;
-      top: 14px;
+      top: 8px;
       right: 60px;
     }
   }
@@ -71,6 +71,7 @@
 }
 
 .emotions__textarea {
+  height: 160px;
   margin-top: 15px;
   margin-bottom: 50px;
   padding: 13px 23px 29px 21px;
@@ -87,7 +88,13 @@
     line-height: 26px;
   }
 
+  @media (min-width: @tablet-width) {
+    margin-top: 54px;
+    margin-bottom: 56px;
+  }
   @media (min-width: @desktop-width) {
-    margin-top: 35px;
+    // margin: 0 20px;
+    // margin-top: 57px;
+    margin: 57px 30px 56px 10px;
   }
 }

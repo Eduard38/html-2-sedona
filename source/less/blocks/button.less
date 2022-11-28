@@ -2,12 +2,12 @@
   display: inline-block;
   text-align: center;
   min-width: 280px;
-  padding: 14px 32px 17px 32px;
+  // padding: 14px 32px 17px 32px;
   margin: 0 20px;
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 57px;
   background: @main-blue;
   color: @white;
   border: none;
@@ -41,16 +41,32 @@
     }
   }
 
+  &--form {
+    margin-bottom: 76px;
+  }
+
+  &--modal {
+    display: block;
+    margin: 0 auto;
+  }
+
   @media (min-width: @tablet-width) {
     &--form {
       width: 324px;
       margin-left: 60px;
+      line-height: 58px;
+      order: 10;
+    }
+
+    &--modal {
+      width: 100%;
     }
   }
 
   @media (min-width: @desktop-width) {
     &--form {
-      margin-left: 110px;
+      margin-left: 122px;
+      width: 480px;
     }
   }
 }

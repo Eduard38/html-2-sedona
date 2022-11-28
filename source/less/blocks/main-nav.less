@@ -22,16 +22,36 @@
   z-index: 1;
   padding: 0;
 
+  &::before {
+    position: absolute;
+    display: none;
+    content: "";
+    top: -30px;
+    left: -40px;
+    width: 180px;
+    height: 140px;
+    background: url("../../img/icons/vector-logo-desktop.svg") no-repeat center;
+    background-size: 200px 140px;
+    z-index: -1;
+  }
+
   @media (min-width: @tablet-width) {
     top: 0;
     bottom: auto;
   }
 }
+  
+@media (min-width: @desktop-width) {
+  .main-nav__logo::before {
+      display: block;
+    }
+}
+
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
-  right: 20px;
+  top: 2px;
+  right: 6px;
   display: block;
   width: 56px;
   height: 56px;

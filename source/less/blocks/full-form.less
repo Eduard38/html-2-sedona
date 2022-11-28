@@ -3,6 +3,11 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;  
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
   }
 }
 
@@ -15,7 +20,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    column-gap: 200px;
+    column-gap: 176px;
   }
 }
 
@@ -24,7 +29,9 @@
 
   @media (min-width: @tablet-width) {
     display: inline-block;
-    // margin-right: 100px;
+    margin: 0;
+    margin-left: auto;
+    margin-top: 18px;
     padding-right: 60px;
     float: right;
     font-family: 'PT Sans';
@@ -32,9 +39,10 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 26px;
+    order: 11;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 110px;
+    padding-right: 140px;
   }
 }

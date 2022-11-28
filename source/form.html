@@ -36,22 +36,22 @@
         <section class="full-form header__page">
           <h2 class="header-page__title">Оставьте свой отзыв</h2>
           <p class="header-page__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-            <form class="full-form__form" method="get" action="https://echo.htmlacademy.ru" target="_blank">
+            <form class="full-form__form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
               <fieldset class="fio">
-                <legend class="form__legend form__legend--fio">Представтесь:</legend>
-                <label class="form__label" for="input-first-name">Имя*:
+                <legend class="form__legend form__legend--fio">Представьтесь:</legend>
+                <label class="form__label form__label--fio" for="input-first-name">Имя*:
                   <input class="form__input form__input--text" type="text" name="full-name" placeholder="Петр" id="input-first-name">
                 </label>
-                <label class="form__label" for="input-second-name">Фамилия*:
+                <label class="form__label form__label--fio" for="input-second-name">Фамилия*:
                   <input class="form__input form__input--text" type="text" name="full-name" placeholder="Иванов" id="input-second-name">
                 </label>
-                <label class="form__label" for="input-patronomic">Отчество:
+                <label class="form__label form__label--fio" for="input-patronomic">Отчество:
                   <input class="form__input form__input--text" type="text" name="full-name" placeholder="Александрович" id="input-patronomic">
                 </label>
               </fieldset>
               <fieldset class="user-contacts">
                 <legend class="form__legend form__legend--user-contacts">Контактная информация</legend>
-                <label class="form__label form__label--tel" for="user-contacts-tel">Контактный телефон*:</label>
+                <label class="form__label form__label--tel" for="user-contacts-tel"><span class="form__label--desktop-hide">Контактный</span> телефон*:</label>
                 <input class="form__input form__input--tel" type="tel" name="user-contacts"  placeholder="Введите телефон" id="user-contacts-tel">
                 <label class="form__label form__label--email" for="user-contacts-mail">Электронная почта*:</label>
                 <input class="form__input form__input--email" type="email" name="user-contacts" placeholder="Введите e-mail" id="user-contacts-mail">
@@ -76,7 +76,7 @@
               <fieldset class="visited-place">
                 <legend class="form__legend form__legend--visited-places">Посещенные<br> достопримечательности:</legend>
                 <ul class="form__list form__list--places">
-                  <li class="form__item">
+                  <li class="form__list__item">
                     <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="places" value="bridge-of-devil" id="places-bridge" checked>
                     <label class="form__label form__label--checkbox" for="places-bridge">
                       <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -85,7 +85,7 @@
                       Мост Дьявола
                     </label>
                   </li>
-                  <li class="form__item">
+                  <li class="form__list__item">
                     <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="places" value="mountain-bell" id="places-mountain" checked>
                     <label class="form__label form__label--checkbox" for="places-mountain">
                       <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -94,7 +94,7 @@
                       Гора-Колокол
                     </label>
                   </li>
-                  <li class="form__item">
+                  <li class="form__list__item">
                     <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="places" value="slide-park" id="places-park" checked>
                     <label class="form__label form__label--checkbox" for="places-park">
                       <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -103,7 +103,7 @@
                       Слайд-парк
                     </label>
                   </li>
-                  <li class="form__item">
+                  <li class="form__list__item">
                     <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="places" value="red-rocks" id="places-rocks">
                     <label class="form__label form__label--checkbox" for="places-rocks">
                       <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -116,14 +116,14 @@
               </fieldset>
               <fieldset class="emotions">
                 <legend class="visually-hidden">Подробный отзыв</legend>
-                <label class="form__legend emotions__label" for="feedback">Опишите свои эмоции:</label>
+                <label class="form__legend form__legend--emotions" for="feedback">Опишите свои эмоции:</label>
                 <textarea class="emotions__textarea" rows="5" name="emotion-feedback"  placeholder="Опишите подробно все свои восторги" id="feedback"></textarea>
               </fieldset>
+              <button class="button button--form" type="submit">
+                <span>Отправить отзыв</span>
+              </button>
+              <p class="full-form__footnote">* - обязательные поля</p>
             </form>
-            <button class="button button--form" type="submit">
-              <span>Отправить отзыв</span>
-            </button>
-            <p class="full-form__footnote">* - обязательные поля</p>
         </section>
       </main>
       <footer class="page-footer">
@@ -141,6 +141,22 @@
             </a>
       </div>
       </footer>
+      <section class="modal modal--failure modal--close">
+        <div class="modal__container">
+          <h3 class="modal__title">Что-то пошло<br> не так!</h3>
+          <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="button button--modal">OK</button>
+        </div>
+      </section>
+      <section class="modal modal--success modal--close">
+        <div class="modal__container">
+          <h3 class="modal__title">Ваш отзыв отправлен!</h3>
+          <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
+          <div class="modal__button__wrapper">
+            <button class="button button--modal">Закрыть окно</button>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
   <script src="js/main-nav-toggle.js"></script>
