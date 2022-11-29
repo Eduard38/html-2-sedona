@@ -60,7 +60,7 @@
     }
 
     &--user-contacts {
-      margin-bottom: 68px;
+      margin-bottom: 70px;
     }
   }
 }
@@ -96,11 +96,12 @@
 
   @media (min-width: @desktop-width) {
     &--places {
-      width: 910px;
-      margin-left: 90px;
-      margin-right: 0;
+      width: 900px;
+      margin-left: 140px;
+      // margin-right: 0;
+      // margin: 0 auto;
+      justify-content: space-between;
     }
-    
   }
 }
 
@@ -109,6 +110,13 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:last-child {
+      margin-left: -20px;
+      margin-right: 18px;
+    }
   }
 }
 
@@ -191,7 +199,7 @@
     &--email {
       display: inline-block;
       margin-left: 76px;
-      margin-right: 18px;
+      margin-right: 14px;
     }
     &--tel::after {
       top: -18px;

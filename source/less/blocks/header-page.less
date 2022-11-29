@@ -5,11 +5,27 @@
   margin-bottom: 28px;
   font-size: 18px;
 
+  &--gallery {
+    margin-top: -8px;
+  }
+
+  &--video-gallery {
+    margin-top: 36px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 26px;
     padding: 0 50px;
     margin-bottom: 32px;
+
+    &--gallery {
+      margin-top: 2px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -21,11 +37,20 @@
   text-align: center;
   line-height: 24px;
   color: @text-grey;
+
+  &--video-gallery {
+    padding: 0 30px;
+    margin-bottom: 34px;
+  }
   
   @media (min-width: @tablet-width) {
     width: 480px;
     margin: 0 auto;
     margin-bottom: 88px;
+
+    &--gallery {
+      margin-bottom: 83px;
+    }
   }
 
   @media (min-width: @desktop-width) {
