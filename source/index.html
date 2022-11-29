@@ -14,10 +14,14 @@
   <body class="page__body">
     <div class="page__wrapper">
       <header class="page-header">
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-          <a class="main-nav__logo">
-            <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
-          </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">         
+            <a class="main-nav__logo">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                  <img src="img/logotype-mobile.svg" width="102" height="84" alt="Логотип Sedona">
+              </picture>
+            </a>
           <button class="main-nav__toggle" type="button"></button>
             <span class="visually-hidden">Открыть меню</span>
           <ul class="main-nav__list">

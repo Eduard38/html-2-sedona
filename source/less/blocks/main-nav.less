@@ -18,26 +18,21 @@
   display: flex;
   position: absolute;
   left: calc(50% - 51px);
-  bottom: -84px;
+  bottom: -98px;
   z-index: 1;
   padding: 0;
-
-  &::before {
-    position: absolute;
-    display: none;
-    content: "";
-    top: -30px;
-    left: -40px;
-    width: 180px;
-    height: 140px;
-    background: url("../../img/icons/vector-logo-desktop.svg") no-repeat center;
-    background-size: 200px 140px;
-    z-index: -1;
-  }
 
   @media (min-width: @tablet-width) {
     top: 0;
     bottom: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: calc(50% - 96px);
+    & img {
+      width: 186px;
+      height: 96px;
+    }
   }
 }
   
