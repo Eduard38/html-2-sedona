@@ -1,3 +1,9 @@
+.controls {
+  @media (min-width: @desktop-width) {
+    top: 2px;
+  }
+}
+
 .controls__bar {
   position: absolute;
   width: 280px;
@@ -17,7 +23,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 400px;
+    width: 550px;
+    left: 290px;
+    top: 22px;
   }
 }
 
@@ -35,6 +43,10 @@
     width: 390px;
     margin-left: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 540px;
+  }
 }
 
 .controls__toggle {
@@ -46,6 +58,10 @@
   background: @white;
   border-radius: 50%;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    left: 113px;
+  }
 }
 
 .controls__buttons {
@@ -69,12 +85,30 @@
     margin-top: -140px;
     background: @black;
     opacity: 0.6;
+
+    & .controls__button--repeat {
+      margin-left: 18px;
+    }
+
+    & .controls__button--fullscreen {
+      margin-right: 26px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 796px;
+    position: relative;
+    width: 800px;
     margin-top: -93px;
     padding: 10px 20px;
+    // top: -46px;
+
+    & .controls__button--repeat {
+      margin-left: 0px;
+    }
+
+    & .controls__button--fullscreen {
+      margin-right: 6px;
+    }
   }
 }
 

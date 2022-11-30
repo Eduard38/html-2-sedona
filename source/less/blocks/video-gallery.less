@@ -1,6 +1,10 @@
 .video-gallery {
   width: 100%;
   margin-bottom: 80px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 120px;
+  }
 }
 
 .video-gallery__player {
@@ -20,4 +24,8 @@
 
 .video-gallery__controls {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    bottom: -47px;
+  }  
 }

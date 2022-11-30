@@ -17,15 +17,23 @@
     font-size: 30px;
     line-height: 26px;
     padding: 0 50px;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
 
     &--gallery {
       margin-top: 2px;
+    }
+
+    &--video-gallery {
+      margin-bottom: 30px;
     }
   }
 
   @media (min-width: @desktop-width) {
     display: block;
+
+    &--video-gallery  {
+      margin-bottom: 36px;
+    }
   }
 }
 
@@ -51,9 +59,22 @@
     &--gallery {
       margin-bottom: 83px;
     }
+
+    &--video-gallery {
+      margin-bottom: 80px;
+      padding: 0 10px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 58px;
+    margin-bottom: 82px;
+
+    &--gallery {
+      margin-bottom: 78px;
+    }
+
+    &--video-gallery  {
+      margin-bottom: 78px;
+    }
   }
 }

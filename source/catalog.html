@@ -103,9 +103,12 @@
         <section class="video-gallery">
          <h2 class="header-page__title header-page__title--video-gallery">Все еще сомневаетесь?</h2>
             <p class="header-page__text header-page__text--video-gallery">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-            <video class="video-gallery__player" src="" width="320" height="200" poster="img/video-poster.jpg">
-              <p>Ваш браузер не поддерживает HTML5 видео. Используйте <a href="">ссылку на видео</a> для доступа.</p>
-            </video>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-poster-tablet.jpg">
+              <source media="(min-width: 768px)" srcset="img/video-poster-tablet.jpg">
+              <img class="video-gallery__player" width="320px" height="200px" alt="Видео о Седоне">
+              <!-- <p>Ваш браузер не поддерживает HTML5 видео. Используйте <a href="">ссылку на видео</a> для доступа.</p> -->
+            </picture>
             <div class="video-gallery__controls controls">
               <div class="controls__bar">
                 <div class="controls__scale"></div>
