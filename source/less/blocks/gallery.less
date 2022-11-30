@@ -69,7 +69,7 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 195px;
+    top: 187px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     color: @white;
@@ -81,7 +81,6 @@
   width: 100%;
   height: 280px;
   vertical-align: bottom;
-  background-image: url("../../img/gallery/photo-2-desktop.jpg");
   background-size: cover;
 
   @media (min-width: @tablet-width) {
@@ -89,9 +88,18 @@
   }
 }
 
-.gallery__item:first-child .gallery__image {
+.gallery__item:first-child {
   @media (min-width: @tablet-width) {
-    height: 400px;
+    .gallery__image {
+      // width: 648px;
+      height: 400px;
+    } 
+  }
+
+  @media (min-width: @desktop-width) {
+    .gallery__item__wrapper {
+      top: 320px;
+    }
   }
 }
 
