@@ -1,6 +1,7 @@
 .controls {
   @media (min-width: @desktop-width) {
-    top: 2px;
+    top: 0px;
+    
   }
 }
 
@@ -83,15 +84,16 @@
     width: 648px;
     height: 93px;
     margin-top: -140px;
-    background: @black;
-    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.6);
 
     & .controls__button--repeat {
       margin-left: 18px;
+      opacity: 1;
     }
 
     & .controls__button--fullscreen {
       margin-right: 26px;
+      opacity: 1;
     }
   }
 
@@ -100,7 +102,6 @@
     width: 800px;
     margin-top: -93px;
     padding: 10px 20px;
-    // top: -46px;
 
     & .controls__button--repeat {
       margin-left: 0px;
@@ -120,12 +121,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  fill: @video-controls;
+  
 
 
   @media (min-width: @tablet-width) {
-    & path {
-      fill: @white;
-    }
+    fill: @white;
   }
 
   @media (min-width: @desktop-width) {
@@ -133,15 +134,16 @@
   }
 }
 
-.controls__button:hover path {
+.controls__button:hover {
   fill: @form-brown;
 
   @media (min-width: @tablet-width) {
+    fill: @white;
     opacity: 0.6;
   }
 }
 
-.controls__button:active path {
+.controls__button:active {
   opacity: 0.3;
 }
 
