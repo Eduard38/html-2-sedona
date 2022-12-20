@@ -152,7 +152,7 @@
     content: "";
     width: 56px;
     height: 56px;
-    top: 35px;
+    top: 33px;
     right: 1px;
     background-color: @form-grey-2;
     background-image: url("../../img/icons/phone.svg");
@@ -182,6 +182,10 @@
 
     &--tel {
       margin-bottom: 8px;
+
+      &::after {
+        top: 35px;
+      }
     }
   }
 
@@ -208,7 +212,7 @@
 
     &--email::after {
       top: -18px;
-      left: 427px;
+      left: 423px;
     }
   }
 }
@@ -258,6 +262,7 @@
     &--tel,
     &--email {
       width: 316px;
+      padding-right: 80px;
     }
   }
 }
@@ -324,11 +329,16 @@
   content: "";
   width: 23px;
   height: 16px;
-  top: 4px;
-  left: -62px;
+  top: 8px;
+  left: -52px;
   background-image: url("../../img/icons/checkbox-tick.svg");
   background-position: center;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    top: 4px;
+    left: -60px;
+  }
 }
 
 .form__input--checkbox:checked + .form__label:active::after {
