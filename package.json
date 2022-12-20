@@ -6,6 +6,7 @@
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.2.5",
     "browser-sync": "2.26.14",
+    "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
@@ -14,18 +15,20 @@
     "gulp-postcss": "9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "^7.0.0",
     "gulp-terser": "^2.1.0",
     "gulp-webp": "^4.0.1",
     "pixel-glass": "^1.0.13",
     "postcss": "8.2.8",
-    "stylelint": "13.13.1",
+    "postcss-csso": "^6.0.1",
+    "stylelint": "^14.16.0",
     "stylelint-config-htmlacademy": "0.1.10"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "build": "gulp build",
     "start": "gulp"
   },
   "browserslist": [

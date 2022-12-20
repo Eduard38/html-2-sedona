@@ -4,12 +4,15 @@ const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const csso = require("postcss-csso");
 const sync = require("browser-sync").create();
 const htmlmin = require("gulp-htmlmin");
 const terser = require('gulp-terser');
 const imagemin = require("gulp-imagemin");
 const rename = require("gulp-rename");
-const webp = require("gulp-webp"); 
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const del = require("del");
 
 // Styles
 
@@ -19,10 +22,12 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -82,14 +87,25 @@ exports.createWebp = createWebp;
 
 // Sprites
 
+const sprite = () => {
+  return gulp.src("source/img/sprites/*.svg")
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("build/img/sprites"));
+}
+
+exports.sprite = sprite;
+
 // Copy 
 
 const copy = () => {
-  gulp.src([
+  return gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
-    "!source/img/icons/*.svg",
+    "source/img/icons/*.svg",
   ], {
     base: "source"
   })
@@ -102,8 +118,10 @@ exports.copy = copy;
 // Clean 
 
 const clean = () => {
-  return delete("build");
+  return del("build");
 };
+
+exports.clean = clean;
 
 // Server
 
@@ -126,12 +144,32 @@ const reload = (done) => {
   sync.reload();
   done();
 }
+
+exports.reload = reload;
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
+
+// Build
+
+const build = gulp.series(
+  clean,
+  copy,
+  imageOpt,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    sprite,
+    createWebp
+  ),
+);
+
+exports.build = build;
 
 exports.default = gulp.series(
   styles, server, watcher
